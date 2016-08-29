@@ -14,6 +14,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login';
+import { RegisterComponent } from './register';
 import { HomeComponent } from './home';
 import { RulesComponent } from './rules';
 
@@ -34,6 +35,7 @@ const APP_PROVIDERS = [
   declarations: [
     AppComponent,
     LoginComponent,
+    RegisterComponent,
     HomeComponent,
     RulesComponent
   ],

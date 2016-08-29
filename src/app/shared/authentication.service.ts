@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
  
 export class User {
   constructor(
-    public email: string,
+    public username: string,
     public password: string) { }
 }
  
 var users = [
-  new User('admin@admin.com','adm9'),
-  new User('user1@gmail.com','a23')
+  new User('admin','admin')
 ];
  
 @Injectable()
@@ -21,7 +20,7 @@ export class AuthenticationService {
   }
 
   login(user) {
-    var authenticatedUser = users.find(u => u.email === user.email);
+    var authenticatedUser = users.find(u => u.username === user.username);
     if (authenticatedUser && authenticatedUser.password === user.password) {
       localStorage.setItem("user", JSON.stringify(authenticatedUser));
       return true;
@@ -34,7 +33,7 @@ export class AuthenticationService {
     return this.http
       .post(
         '/login', 
-        JSON.stringify({ email, password }), 
+        JSON.stringify({ username, password }), 
         { headers }
       )
       .map(res => res.json())

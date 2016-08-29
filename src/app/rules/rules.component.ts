@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-/*
 import {
   TableOptions,
   TableColumn,
   ColumnMode
 } from 'angular2-data-table';
-*/
 
 @Component({
   selector: 'rules',
@@ -13,9 +11,9 @@ import {
 })
 
 export class RulesComponent {
+/*
   rows = [];
 
-/*
   options = new TableOptions({
     columnMode: ColumnMode.force,
     headerHeight: 50,
@@ -27,10 +25,10 @@ export class RulesComponent {
       new TableColumn({ name: 'Company' })
     ]
   });
-*/
 
   constructor() {
     this.fetch((data) => {
+      console.log(data);
       this.rows.push(...data);
     });
   }
@@ -45,4 +43,5 @@ export class RulesComponent {
 
     req.send();
   }
+*/
 }
