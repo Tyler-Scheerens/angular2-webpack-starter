@@ -11,7 +11,6 @@ import {
 })
 
 export class RulesComponent {
-/*
   rows = [];
 
   options = new TableOptions({
@@ -20,9 +19,9 @@ export class RulesComponent {
     footerHeight: 50,
     rowHeight: 'auto',
     columns: [
-      new TableColumn({ prop: 'name' }),
-      new TableColumn({ name: 'Gender' }),
-      new TableColumn({ name: 'Company' })
+      new TableColumn({ name: 'Rule Name', prop: 'rule_name' }),
+      new TableColumn({ name: 'Rule Type', prop: 'rule_type' }),
+      new TableColumn({ name: 'Alert Type', prop: 'alert_type' })
     ]
   });
 
@@ -43,5 +42,4 @@ export class RulesComponent {
 
     req.send();
   }
-*/
 }

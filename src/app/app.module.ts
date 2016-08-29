@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import { Angular2DataTableModule } from 'angular2-data-table';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -39,13 +40,14 @@ const APP_PROVIDERS = [
     HomeComponent,
     RulesComponent
   ],
-  imports: [ // import Angular's modules
+  imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true })
+    RouterModule.forRoot(ROUTES, { useHash: true }),
+    Angular2DataTableModule
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
+  providers: [
     ENV_PROVIDERS,
     APP_PROVIDERS
   ]
