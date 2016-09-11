@@ -11,7 +11,6 @@ import { AuthenticationService } from './shared'
       <div class="navbar-header">
         <a *ngIf="loggedIn()" class="navbar-brand" [routerLinkActive]="['active', 'router-link-active']" [routerLink]="['home']">Home</a>
         <a *ngIf="loggedIn()" class="navbar-brand" [routerLinkActive]="['active', 'router-link-active']" [routerLink]="['rules']">Rules</a>
-        <a *ngIf="loggedIn()" class="navbar-brand" [routerLinkActive]="['active', 'router-link-active']" [routerLink]="['detail']">Detail</a>
       </div>
       <div class="navbar-header navbar-right">
         <a *ngIf="loggedIn()" class="navbar-brand" (click)="logout()" [routerLinkActive]="['active', 'router-link-active']" [routerLink]="['login']">Logout</a>

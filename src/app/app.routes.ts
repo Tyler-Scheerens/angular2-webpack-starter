@@ -15,8 +15,5 @@ export const ROUTES: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent, canActivate: [ LoginGuard ] },
   { path: 'rules', component: RulesComponent, canActivate: [ LoginGuard ] },
-  {
-    path: 'detail', loadChildren: () => System.import('./+detail')
-  },
   { path: '**', redirectTo: 'home' }
 ];

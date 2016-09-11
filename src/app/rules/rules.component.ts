@@ -7,6 +7,7 @@ import {
 
 @Component({
   selector: 'rules',
+  styleUrls: [ 'rules.style.css' ],
   templateUrl: 'rules.template.html'
 })
 
